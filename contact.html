@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تواصل معنا | أكاديمية الأصالة</title>
+<style>
+body{margin:0;font-family:Tahoma,Arial;background:#f7f3e9;color:#292920;line-height:1.9}
+header,footer{background:#171a16;color:white;text-align:center;padding:20px}
+header a{color:#d6b36a;margin:10px;text-decoration:none}
+main{max-width:600px;margin:auto;padding:30px 6%}
+form{background:white;padding:22px;border-radius:12px;display:grid;gap:14px}
+input,select,textarea{padding:13px;font:inherit;border:1px solid #ccc;border-radius:6px;width:100%;box-sizing:border-box}
+textarea{min-height:100px}
+button{background:#d6b36a;padding:13px;border:0;border-radius:6px;font-weight:bold;font-size:16px}
+#msg{color:#315b34}
+</style>
+</head>
+<body>
+<header>
+<h2 style="color:#d6b36a">🐎 أكاديمية الأصالة للفروسية</h2>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="courses.html">الدورات</a>
+<a href="about.html">من نحن</a>
+<a href="contact.html">تواصل معنا</a>
+</nav>
+</header>
+<main>
+<h1>تواصل معنا</h1>
+<p>يسعدنا استقبال استفساراتك حول برامج الفروسية والتدريب.</p>
+<form id="form">
+<input name="name" placeholder="الاسم الكامل" required>
+<input name="phone" type="tel" placeholder="رقم الهاتف" required>
+<select name="course" required>
+<option value="">اختر الدورة</option>
+<option>الفروسية للمبتدئين</option>
+<option>تطوير مهارات الركوب</option>
+<option>العناية بالخيل</option>
+</select>
+<textarea name="message" placeholder="اكتب استفسارك"></textarea>
+<button type="submit">إرسال الاستفسار</button>
+<p id="msg" role="status"></p>
+</form>
+</main>
+<footer>© أكاديمية الأصالة للفروسية</footer>
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("msg").textContent="هذا نموذج تجريبي، لم تُرسل البيانات. يلزم ربطه بخدمة لاستقبال الطلبات.";
+});
+</script>
+</body>
+</html>
