@@ -4,52 +4,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>تواصل معنا | أكاديمية الفخامة</title>
+<title>تواصل معنا | Luxury Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Tahoma,Arial;background:#f7f3e9;color:#292920;line-height:1.9}
-header,footer{background:#171a16;color:white;text-align:center;padding:20px}
-header a{color:#d6b36a;margin:10px;text-decoration:none}
-main{max-width:600px;margin:auto;padding:30px 6%}
-form{background:white;padding:22px;border-radius:12px;display:grid;gap:14px}
-input,select,textarea{padding:13px;font:inherit;border:1px solid #ccc;border-radius:6px;width:100%;box-sizing:border-box}
-textarea{min-height:100px}
-button{background:#d6b36a;padding:13px;border:0;border-radius:6px;font-weight:bold;font-size:16px}
-#msg{color:#315b34}
+*{box-sizing:border-box}
+body{margin:0;font-family:Cairo,sans-serif;background:#f6f2e9;color:#222a23;line-height:1.9}
+header,footer{background:#101812;color:white;padding:20px;text-align:center}
+.brand{color:#c9a96e;font-size:23px;font-weight:800}
+nav{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:12px}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#c9a96e}
+.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#101812,#304635);color:white}
+.hero small{color:#c9a96e;letter-spacing:2px}
+h1{font-size:clamp(32px,7vw,48px);margin:10px 0}
+.hero p{color:#e1e5dc}
+main{max-width:1000px;margin:auto;padding:45px 20px}
+.intro{text-align:center;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:white;border:1px solid #e4dac7;padding:28px 22px;text-align:center;border-radius:4px}
+.symbol{font-size:38px;color:#a8864d}
+h2{font-size:22px;margin:8px 0}
+p{color:#74766d}
+.number{font-size:19px;font-weight:700;direction:ltr}
+.btn{display:inline-block;margin-top:12px;padding:10px 20px;background:#c9a96e;color:#172017;text-decoration:none;font-weight:800}
+.btn:hover{background:#e2c58a}
+footer{margin-top:20px;font-size:13px;color:#ddd}
+footer strong{color:#c9a96e}
+@media(max-width:450px){nav{gap:13px}.card{padding:23px 15px}}
 </style>
 </head>
 <body>
 <header>
-<h2 style="color:#d6b36a">🐎 أكاديمية الفخامة للفروسية</h2>
+<div class="brand">♞ أكاديمية الفخامة</div>
+<div style="font-size:11px;letter-spacing:3px;color:#c9a96e">LUXURY ACADEMY</div>
 <nav>
 <a href="index.html">الرئيسية</a>
-<a href="courses.html">الدورات</a>
+<a href="courses.html">البرامج</a>
 <a href="about.html">من نحن</a>
 <a href="contact.html">تواصل معنا</a>
 </nav>
 </header>
-<main>
+
+<section class="hero">
+<small>نحن بانتظار تواصلك</small>
 <h1>تواصل معنا</h1>
-<p>يسعدنا استقبال استفساراتك حول برامج الفروسية والتدريب.</p>
-<form id="form">
-<input name="name" placeholder="الاسم الكامل" required>
-<input name="phone" type="tel" placeholder="رقم الهاتف" required>
-<select name="course" required>
-<option value="">اختر الدورة</option>
-<option>الفروسية للمبتدئين</option>
-<option>تطوير مهارات الركوب</option>
-<option>العناية بالخيل</option>
-</select>
-<textarea name="message" placeholder="اكتب استفسارك"></textarea>
-<button type="submit">إرسال الاستفسار</button>
-<p id="msg" role="status"></p>
-</form>
+<p>يسعدنا الرد على استفساراتك حول أكاديمية الفخامة للفروسية.</p>
+</section>
+
+<main>
+<div class="intro">
+<h2>كيف يمكنك التواصل معنا؟</h2>
+<p>اختر وسيلة التواصل المناسبة لك.</p>
+</div>
+
+<div class="cards">
+<div class="card">
+<div class="symbol">◉</div>
+<h2>واتساب</h2>
+<p>للاستفسارات والتواصل المباشر</p>
+<div class="number">+963 968 507 970</div>
+<a class="btn" href="https://wa.me/963968507970" target="_blank" rel="noopener">راسلنا على واتساب ↗</a>
+</div>
+
+<div class="card">
+<div class="symbol">◎</div>
+<h2>إنستغرام</h2>
+<p>تابع أخبار الأكاديمية وصورها</p>
+<p style="direction:ltr;font-weight:bold">@al_fakhama.academy</p>
+<a class="btn" href="https://www.instagram.com/al_fakhama.academy/" target="_blank" rel="noopener">زيارة حسابنا ↗</a>
+</div>
+
+<div class="card">
+<div class="symbol">✉</div>
+<h2>البريد الإلكتروني</h2>
+<p>سيُضاف البريد الإلكتروني الرسمي للأكاديمية عند توفره.</p>
+</div>
+</div>
 </main>
-<footer>© أكاديمية الفخامة للفروسية</footer>
+
+<footer>
+<strong>Luxury Academy</strong><br>
+أكاديمية الفخامة للفروسية<br>
+© <span id="year"></span> جميع الحقوق محفوظة
+</footer>
 <script>
-document.getElementById("form").addEventListener("submit",function(e){
-e.preventDefault();
-document.getElementById("msg").textContent="تجربة سوسو";
-});
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
