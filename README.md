@@ -1,1 +1,1 @@
-# equestrian-academy
+# Luxury-academy
