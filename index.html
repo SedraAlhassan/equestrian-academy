@@ -256,6 +256,22 @@ footer strong{color:var(--gold)}
       </select>
 
       <label for="date">التاريخ المفضّل</label>
+
+<label for="time">الوقت المفضّل</label>
+<select id="time" name="time" required>
+  <option value="">اختَر الخدمة أولاً</option>
+</select>
+
+<div id="trainingPeriodBox" style="display:none">
+  <label for="trainingPeriod">فترة التدريب</label>
+  <select id="trainingPeriod" name="trainingPeriod">
+    <option value="">اختر الفترة</option>
+    <option value="صباحية">صباحية</option>
+    <option value="مسائية">مسائية</option>
+    <option value="برايفت (تدريب خاص)">برايفت (تدريب خاص)</option>
+  </select>
+</div>
+
       <input id="date" name="date" type="date" required>
 
       <label for="notes">ملاحظات إضافية</label>
