@@ -377,6 +377,8 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   const phone = document.getElementById('phone').value.trim();
   const service = document.getElementById('service').value;
   const date = document.getElementById('date').value;
+const time = document.getElementById('time').value;
+const period = document.getElementById('trainingPeriod').value;
   const notes = document.getElementById('notes').value.trim();
 
   const message =
@@ -385,9 +387,12 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     'رقم الهاتف: ' + encodeURIComponent(phone) + '%0A' +
     'الخدمة: ' + encodeURIComponent(service) + '%0A' +
     'التاريخ المفضّل: ' + encodeURIComponent(date) + '%0A' +
+'الوقت: ' + encodeURIComponent(time) + '%0A' +
+'فترة التدريب: ' + encodeURIComponent(period || 'لا ينطبق') + '%0A' +
     'ملاحظات: ' + encodeURIComponent(notes);
 
-  const url = 'https://wa.me/963936090222?text=' + message;
+  const url = 'https://wa.me/963936090222?text=' + encodeURIComponent(message);
+
   window.open(url, '_blank');
 });
 </script>
