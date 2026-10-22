@@ -1,149 +1,286 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Luxury Academy | أكاديمية الفخامة</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--dark:#101812;--green:#1e3025;--gold:#c9a96e;--cream:#f6f2e9}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Cairo,Tahoma,sans-serif;background:var(--cream);color:#242820;line-height:1.9}
-a{text-decoration:none;color:inherit}
-header{background:var(--dark);color:white;border-bottom:1px solid #9c7b454d}
-nav{max-width:1150px;margin:auto;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
-.brand{font-size:20px;font-weight:800;color:var(--gold)}
-.brand small{display:block;font-size:10px;letter-spacing:3px;text-align:center}
-.links{display:flex;gap:20px;font-size:13px;flex-wrap:wrap}
-.links a:hover{color:var(--gold)}
-.hero{min-height:590px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,#0c150df0,#0c150d88,#0c150d22),url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1800&q=90') center/cover}
-.hero-inner{max-width:1150px;width:100%;margin:auto;padding:70px 7%}
-.eyebrow{color:var(--gold);letter-spacing:2px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(40px,7vw,72px);line-height:1.4;margin:20px 0}
-h1 span{color:var(--gold)}
-.hero p{max-width:510px;color:#e8e8df;margin-bottom:30px}
-.btn{display:inline-block;background:var(--gold);color:#182017;padding:12px 25px;font-weight:800;border:0;cursor:pointer}
-.btn:hover{background:#e1c78f}
-section{padding:75px 6%}
-.container{max-width:1100px;margin:auto}
-.heading{text-align:center;margin-bottom:38px}
-.heading small{color:#98763d;font-weight:bold;letter-spacing:2px}
-h2{font-size:clamp(27px,4vw,39px);line-height:1.5;margin:7px 0}
-.heading p{color:#777}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.card{background:white;border:1px solid #e9e0d0;transition:.25s}
-.card:hover{transform:translateY(-5px);box-shadow:0 15px 30px #0001}
-.card img{width:100%;height:210px;object-fit:cover;display:block}
-.card-content{padding:22px}
-.card small{color:#9c7b45;letter-spacing:2px}
-.card h3{margin:7px 0;font-size:20px}
-.card p{font-size:14px;color:#777}
-.card a{display:inline-block;margin-top:14px;color:#8b682f;font-weight:bold}
-.story{background:var(--dark);color:white}
-.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.story img{width:100%;height:350px;object-fit:cover}
-.story p{color:#d2d6cd;margin:15px 0}
-.story h2 span{color:var(--gold)}
-.values{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px;color:var(--gold);font-size:13px}
-.contact{background:#eae2d2}
-.contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:35px}
-.contact p{color:#686a61}
-form{background:white;padding:25px;display:grid;gap:13px}
-label{font-size:13px;font-weight:bold}
-input,select,textarea{width:100%;padding:12px;border:1px solid #d7d1c5;background:#fcfbf8;font:inherit}
-textarea{min-height:100px}
-footer{background:#0b110d;color:#ddd;text-align:center;padding:27px}
-footer strong{color:var(--gold)}
-#message{font-size:13px;color:#315b34}
-@media(max-width:700px){
- nav{justify-content:center}
- .links{justify-content:center;gap:13px}
- .hero{min-height:540px;background-position:58% center}
- .hero-inner{padding:55px 6%}
- section{padding:55px 6%}
- .cards{grid-template-columns:1fr}
- .card img{height:230px}
- .story-inner,.contact-inner{grid-template-columns:1fr;gap:25px}
- .story img{height:250px}
+:root {
+  --dark:#101812;
+  --green:#1e3025;
+  --gold:#c9a96e;
+  --cream:#f6f2e9;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:Cairo,Tahoma,sans-serif;
+  background:var(--cream);
+  color:#242820;
+  line-height:1.9;
+}
+a { text-decoration:none; color:inherit; }
+header {
+  background:var(--dark);
+  color:white;
+  border-bottom:1px solid #9c7b454d;
+}
+nav {
+  max-width:1150px;
+  margin:auto;
+  padding:17px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.brand {
+  font-size:20px;
+  font-weight:800;
+  color:var(--gold);
+}
+.brand small {
+  display:block;
+  font-size:10px;
+  letter-spacing:3px;
+  text-align:center;
+}
+.links {
+  display:flex;
+  gap:20px;
+  font-size:13px;
+  flex-wrap:wrap;
+}
+.links a:hover { color:var(--gold); }
+.hero {
+  min-height:590px;
+  display:flex;
+  align-items:center;
+  color:white;
+  background:
+    linear-gradient(90deg,#0c150df0,#0c150d88,#0c150d22),
+    url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1800&q=90') center/cover;
+}
+.hero-inner {
+  max-width:1150px;
+  width:100%;
+  margin:auto;
+  padding:70px 7%;
+}
+.eyebrow {
+  color:var(--gold);
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:bold;
+}
+h1 {
+  font-size:clamp(40px,7vw,72px);
+  line-height:1.4;
+  margin:20px 0;
+}
+h1 span,.story h2 span { color:var(--gold); }
+.hero p {
+  max-width:510px;
+  color:#e8e8df;
+  margin-bottom:30px;
+}
+.btn {
+  display:inline-block;
+  background:var(--gold);
+  color:#182017;
+  padding:12px 25px;
+  font-weight:800;
+  border:0;
+  cursor:pointer;
+  font-family:inherit;
+}
+.btn:hover { background:#e1c78f; }
+section { padding:75px 6%; }
+.container { max-width:1100px; margin:auto; }
+.heading { text-align:center; margin-bottom:38px; }
+.heading small {
+  color:#98763d;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+h2 {
+  font-size:clamp(27px,4vw,39px);
+  line-height:1.5;
+  margin:7px 0;
+}
+.heading p { color:#777; }
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.card {
+  background:white;
+  border:1px solid #e9e0d0;
+  transition:.25s;
+  min-width:0;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 30px #0001;
+}
+.card img {
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+}
+.card-content { padding:22px; }
+.card small {
+  color:#9c7b45;
+  letter-spacing:2px;
+}
+.card h3 { margin:7px 0; font-size:20px; }
+.card p { font-size:14px; color:#777; }
+.card a {
+  display:inline-block;
+  margin-top:14px;
+  color:#8b682f;
+  font-weight:bold;
+}
+.story { background:var(--dark); color:white; }
+.story-inner {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+.story img {
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+.story p { color:#d2d6cd; margin:15px 0; }
+.values {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:22px;
+  color:var(--gold);
+  font-size:13px;
+}
+.contact { background:#eae2d2; }
+form {
+  background:white;
+  padding:25px;
+  display:grid;
+  gap:13px;
+  max-width:760px;
+  margin:auto;
+}
+label { font-size:13px; font-weight:bold; }
+input,select,textarea {
+  width:100%;
+  padding:12px;
+  border:1px solid #d7d1c5;
+  background:#fcfbf8;
+  font:inherit;
+  border-radius:2px;
+}
+textarea { min-height:100px; resize:vertical; }
+#formMessage { font-size:13px; color:#315b34; }
+footer {
+  background:#0b110d;
+  color:#ddd;
+  text-align:center;
+  padding:27px;
+}
+footer strong { color:var(--gold); }
+
+@media(max-width:700px) {
+  nav { justify-content:center; }
+  .links { justify-content:center; gap:13px; }
+  .hero { min-height:540px; background-position:58% center; }
+  .hero-inner { padding:55px 6%; }
+  section { padding:55px 6%; }
+  .cards { grid-template-columns:1fr; }
+  .card img { height:230px; }
+  .story-inner { grid-template-columns:1fr; gap:25px; }
+  .story img { height:250px; }
 }
 </style>
 </head>
+
 <body>
 <header>
 <nav>
-<a class="brand" href="#home">♞ أكاديمية الفخامة<small>LUXURY ACADEMY</small></a>
-<div class="links">
-<a href="#home">الرئيسية</a>
-<a href="#courses">البرامج</a>
-<a href="#services">خدماتنا</a>
-<a href="#about">قصتنا</a>
-<a href="#contact">تواصل معنا</a>
-<a href="#booking">احجز الآن</a>
-</div>
+  <a class="brand" href="#home">
+    ♞ أكاديمية الفخامة
+    <small>LUXURY ACADEMY</small>
+  </a>
+  <div class="links">
+    <a href="#home">الرئيسية</a>
+    <a href="#courses">البرامج</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#about">قصتنا</a>
+    <a href="#contact">تواصل معنا</a>
+    <a href="#booking">احجز الآن</a>
+  </div>
 </nav>
 </header>
 
 <main>
+
 <section class="hero" id="home">
-<div class="hero-inner">
-<div class="eyebrow">الأصالة • الأناقة • الفروسية</div>
-<h1>حيث تلتقي <span>الفخامة</span><br>بروح الخيل</h1>
-<p>اكتشف عالم الفروسية في تجربة تجمع بين الشغف والثقة والتعلّم، وابدأ رحلتك نحو علاقة مميزة مع الخيل.</p>
-<a class="btn" href="#courses">اكتشف برامجنا ←</a>
-</div>
+  <div class="hero-inner">
+    <div class="eyebrow">الأصالة • الأناقة • الفروسية</div>
+    <h1>حيث تلتقي <span>الفخامة</span><br>بروح الخيل</h1>
+    <p>اكتشف عالم الفروسية في تجربة تجمع بين الشغف والثقة والتعلّم، وابدأ رحلتك نحو علاقة مميزة مع الخيل.</p>
+    <a class="btn" href="#courses">اكتشف برامجنا ←</a>
+  </div>
 </section>
 
 <section id="courses">
-<div class="container">
-<div class="heading">
-<small>اكتشف عالمنا</small>
-<h2>برامجنا التدريبية</h2>
-<p>خطوتك الأولى نحو تجربة فروسية لا تُنسى.</p>
-</div>
-<div class="cards">
-<article class="card">
-<img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=85" alt="حصان">
-<div class="card-content">
-<small>PROGRAM 01</small>
-<h3>الفروسية للمبتدئين</h3>
-<p>تعرّف على أساسيات الركوب والتوازن والتعامل الآمن مع الخيل.</p>
-<a href="#contact">استفسر عن البرنامج ←</a>
-</div>
-</article>
-<article class="card">
-<img src="live-kaiah-b2nuVp5UIkE-unsplash.jpg" alt="الفروسية">
-<div class="card-content">
-<small>PROGRAM 02</small>
-<h3>تطوير مهارات الركوب</h3>
-<p>طوّر مهاراتك وتحكمك وتواصلك مع الحصان بالتدريج.</p>
-<a href="#contact">استفسر عن البرنامج ←</a>
-</div>
-</article>
-<article class="card">
-<img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=85" alt="الطبيعة">
-<div class="card-content">
-<small>PROGRAM 03</small>
-<h3>العناية بالخيل</h3>
-<p>تعرّف على احتياجات الخيل وأساسيات العناية بها.</p>
-<a href="#contact">استفسر عن البرنامج ←</a>
-</div>
-</article>
-</div>
-</div>
+  <div class="container">
+    <div class="heading">
+      <small>اكتشف عالمنا</small>
+      <h2>برامجنا التدريبية</h2>
+      <p>خطوتك الأولى نحو تجربة فروسية لا تُنسى.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=85" alt="حصان">
+        <div class="card-content">
+          <small>PROGRAM 01</small>
+          <h3>الفروسية للمبتدئين</h3>
+          <p>تعرّف على أساسيات الركوب والتوازن والتعامل الآمن مع الخيل.</p>
+          <a href="#booking">استفسر عن البرنامج ←</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="live-kaiah-b2nuVp5UIkE-unsplash.jpg" alt="الفروسية">
+        <div class="card-content">
+          <small>PROGRAM 02</small>
+          <h3>تطوير مهارات الركوب</h3>
+          <p>طوّر مهاراتك وتحكمك وتواصلك مع الحصان بالتدريج.</p>
+          <a href="#booking">استفسر عن البرنامج ←</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=85" alt="الطبيعة">
+        <div class="card-content">
+          <small>PROGRAM 03</small>
+          <h3>العناية بالخيل</h3>
+          <p>تعرّف على احتياجات الخيل وأساسيات العناية بها.</p>
+          <a href="#booking">استفسر عن البرنامج ←</a>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
 
-
-<select id="service" name="service" required>
-  <option value="">اختر الخدمة</option>
-  <option value="ركوب حر داخل الملعب">ركوب حر داخل الملعب</option>
-  <option value="دورة تدريبية">دورة تدريبية</option>
-  <option value="مسارات خارجية">مسارات خارجية</option>
-  <option value="جلسة تصوير">جلسة تصوير</option>
-  <option value="استفسار آخر">استفسار آخر</option>
-</select>
-
+<section id="services">
   <div class="container">
     <div class="heading">
       <small>OUR SERVICES</small>
@@ -159,7 +296,7 @@ footer strong{color:var(--gold)}
           <p>تجربة ركوب ممتعة ضمن حجز زمني داخل الملعب.</p>
           <h3>150,000 ل.س</h3>
           <p>للساعة الواحدة</p>
-          <a href="#contact">احجز تجربتك ←</a>
+          <a href="#booking">احجز تجربتك ←</a>
         </div>
       </article>
 
@@ -174,7 +311,7 @@ footer strong{color:var(--gold)}
           <p>• المواصلات مؤمّنة 🚐</p>
           <h3>1,300,000 ل.س</h3>
           <p>للباقة الشهرية، شاملة المواصلات</p>
-          <a href="#contact">استفسر عن الدورة ←</a>
+          <a href="#booking">استفسر عن الدورة ←</a>
         </div>
       </article>
 
@@ -186,7 +323,7 @@ footer strong{color:var(--gold)}
           <p>• المدة: ساعة ونصف إلى ساعتين</p>
           <h3>250,000 ل.س</h3>
           <p>للشخص الواحد</p>
-          <a href="#contact">احجز مسارك ←</a>
+          <a href="#booking">احجز مسارك ←</a>
         </div>
       </article>
 
@@ -196,7 +333,7 @@ footer strong{color:var(--gold)}
           <h3>📸 جلسات التصوير</h3>
           <p>وثّق أجمل لحظاتك مع الخيل في أجواء مميزة.</p>
           <p>جلسات تصوير داخلية وخارجية.</p>
-          <a href="#contact">استفسر عن الجلسات ←</a>
+          <a href="#booking">استفسر عن الجلسات ←</a>
         </div>
       </article>
     </div>
@@ -215,9 +352,7 @@ footer strong{color:var(--gold)}
       <h2>📍 زورونا في أكاديمية الفخامة</h2>
       <p>دمشق – طريق المطار – الجسر السابع – تل مسكن</p>
       <p>🚐 المواصلات مؤمّنة للدورات التدريبية.</p>
-      <a class="btn"
-         href="https://maps.app.goo.gl/T73JccJYQYM9QpMt5"
-         target="_blank" rel="noopener">
+      <a class="btn" href="https://maps.app.goo.gl/T73JccJYQYM9QpMt5" target="_blank" rel="noopener">
         افتح الموقع على الخريطة ←
       </a>
     </div>
@@ -225,17 +360,20 @@ footer strong{color:var(--gold)}
 </section>
 
 <section class="story" id="about">
-<div class="container story-inner">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="منظر طبيعي">
-<div>
-<div class="eyebrow">قصتنا وقيمنا</div>
-<h2>الفروسية ليست رياضة فقط، بل <span>أسلوب حياة</span></h2>
-<p>في أكاديمية الفخامة، نؤمن أن العلاقة مع الخيل تُبنى على الصبر والثقة والاحترام. هدفنا تقديم تجربة تعليمية ممتعة تراعي سلامة الفارس ورفاهية الخيل.</p>
-<div class="values"><span>✦ السلامة</span><span>✦ الأصالة</span><span>✦ الرفق بالخيل</span></div>
-</div>
-</div>
+  <div class="container story-inner">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="منظر طبيعي">
+    <div>
+      <div class="eyebrow">قصتنا وقيمنا</div>
+      <h2>الفروسية ليست رياضة فقط، بل <span>أسلوب حياة</span></h2>
+      <p>في أكاديمية الفخامة، نؤمن أن العلاقة مع الخيل تُبنى على الصبر والثقة والاحترام. هدفنا تقديم تجربة تعليمية ممتعة تراعي سلامة الفارس ورفاهية الخيل.</p>
+      <div class="values">
+        <span>✦ السلامة</span>
+        <span>✦ الأصالة</span>
+        <span>✦ الرفق بالخيل</span>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <section id="booking">
   <div class="container">
@@ -247,156 +385,47 @@ footer strong{color:var(--gold)}
 
     <form id="bookingForm">
       <label for="name">الاسم الكامل</label>
-      <input id="name" name="name" required
-             placeholder="اكتب اسمك الكامل">
+      <input id="name" name="name" required placeholder="اكتب اسمك الكامل">
 
       <label for="phone">رقم الهاتف</label>
-      <input id="phone" name="phone" type="tel" required
-             placeholder="رقم التواصل">
+      <input id="phone" name="phone" type="tel" required placeholder="رقم التواصل">
 
       <label for="service">نوع الطلب</label>
       <select id="service" name="service" required>
         <option value="">اختر الخدمة</option>
-        <option>ركوب حر داخل الملعب</option>
-        <option>دورة تدريبية</option>
-        <option>مسارات خارجية</option>
-        <option>جلسة تصوير</option>
-        <option>استفسار آخر</option>
+        <option value="ركوب حر داخل الملعب">ركوب حر داخل الملعب</option>
+        <option value="دورة تدريبية">دورة تدريبية</option>
+        <option value="مسارات خارجية">مسارات خارجية</option>
+        <option value="جلسة تصوير">جلسة تصوير</option>
+        <option value="استفسار آخر">استفسار آخر</option>
       </select>
 
-    
+      <div id="trainingPeriodBox" style="display:none">
+        <label for="trainingPeriod">فترة التدريب</label>
+        <select id="trainingPeriod" name="trainingPeriod">
+          <option value="">اختر الفترة</option>
+          <option value="صباحية">صباحية</option>
+          <option value="مسائية">مسائية</option>
+          <option value="برايفت (تدريب خاص)">برايفت (تدريب خاص)</option>
+        </select>
+      </div>
 
-<label for="time">الوقت المفضّل</label>
-<select id="time" name="time" required>
-  <option value="">اختَر الخدمة أولاً</option>
-</select>
+      <label for="time">الوقت المفضّل</label>
+      <select id="time" name="time" required>
+        <option value="">اختر الخدمة أولاً</option>
+      </select>
 
-<div id="trainingPeriodBox" style="display:none">
-  <label for="trainingPeriod">فترة التدريب</label>
-  <select id="trainingPeriod" name="trainingPeriod">
-    <option value="">اختر الفترة</option>
-    <option value="صباحية">صباحية</option>
-    <option value="مسائية">مسائية</option>
-    <option value="برايفت (تدريب خاص)">برايفت (تدريب خاص)</option>
-  </select>
-</div>
-
-  <label for="date">التاريخ المفضّل</label>
+      <label for="date">التاريخ المفضّل</label>
       <input id="date" name="date" type="date" required>
 
       <label for="notes">ملاحظات إضافية</label>
-      <textarea id="notes" name="notes"
-                placeholder="عدد الأشخاص أو أي تفاصيل إضافية"></textarea>
+      <textarea id="notes" name="notes" placeholder="عدد الأشخاص أو أي تفاصيل إضافية"></textarea>
 
-      <button class="btn" type="submit">
-        إرسال الطلب عبر واتساب
-      </button>
-
-      <p id="formMessage"></p>
+      <button class="btn" type="submit">إرسال الطلب عبر واتساب</button>
+      <p id="formMessage" role="status"></p>
     </form>
   </div>
 </section>
-
-<script>
-
-const serviceSelect = document.getElementById('service');
-const timeSelect = document.getElementById('time');
-const trainingPeriodBox = document.getElementById('trainingPeriodBox');
-const trainingPeriod = document.getElementById('trainingPeriod');
-
-function updateBookingOptions() {
-  const service = serviceSelect.value;
-  timeSelect.innerHTML = '<option value="">اختر الوقت</option>';
-
-  trainingPeriodBox.style.display =
-    service === 'دورة تدريبية' ? 'block' : 'none';
-  trainingPeriod.required = service === 'دورة تدريبية';
-
-  let start = 6;
-  let end = 17;
-
-  if (service === 'ركوب حر داخل الملعب') {
-    end = 23;
-  }
-
-  if (service === 'مسارات خارجية') {
-    end = 17;
-  }
-
-  if (
-    service === 'ركوب حر داخل الملعب' ||
-    service === 'مسارات خارجية'
-  ) {
-    for (let hour = start; hour <= end; hour++) {
-      const option = document.createElement('option');
-      const suffix = hour < 12 ? 'صباحًا' : 'مساءً';
-      const displayHour = hour % 12 || 12;
-
-      option.value = String(hour).padStart(2, '0') + ':00';
-      option.textContent = displayHour + ':00 ' + suffix;
-      timeSelect.appendChild(option);
-    }
-  } else if (service === 'دورة تدريبية') {
-    timeSelect.innerHTML =
-      '<option value="">اختر الفترة أولاً</option>';
-  }
-}
-
-serviceSelect.addEventListener('change', updateBookingOptions);
-
-trainingPeriod.addEventListener('change', function() {
-  if (serviceSelect.value !== 'دورة تدريبية') return;
-
-  timeSelect.innerHTML = '<option value="">اختر الوقت</option>';
-
-  let hours = [];
-
-  if (trainingPeriod.value === 'صباحية') {
-    hours = [6, 7, 8, 9, 10, 11];
-  } else if (trainingPeriod.value === 'مسائية') {
-    hours = [16, 17, 18, 19, 20, 21];
-  } else if (trainingPeriod.value === 'برايفت (تدريب خاص)') {
-    hours = [6, 7, 8, 9, 10, 11, 16, 17, 18, 19, 20, 21];
-  }
-
-  hours.forEach(hour => {
-    const option = document.createElement('option');
-    const suffix = hour < 12 ? 'صباحًا' : 'مساءً';
-    const displayHour = hour % 12 || 12;
-
-    option.value = String(hour).padStart(2, '0') + ':00';
-    option.textContent = displayHour + ':00 ' + suffix;
-    timeSelect.appendChild(option);
-  });
-});
-
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const service = document.getElementById('service').value;
-  const date = document.getElementById('date').value;
-const time = document.getElementById('time').value;
-const period = document.getElementById('trainingPeriod').value;
-  const notes = document.getElementById('notes').value.trim();
-
-  const message =
-    'السلام عليكم، أريد تقديم طلب حجز في أكاديمية الفخامة 🏇%0A' +
-    'الاسم: ' + encodeURIComponent(name) + '%0A' +
-    'رقم الهاتف: ' + encodeURIComponent(phone) + '%0A' +
-    'الخدمة: ' + encodeURIComponent(service) + '%0A' +
-    'التاريخ المفضّل: ' + encodeURIComponent(date) + '%0A' +
-'الوقت: ' + encodeURIComponent(time) + '%0A' +
-'فترة التدريب: ' + encodeURIComponent(period || 'لا ينطبق') + '%0A' +
-    'ملاحظات: ' + encodeURIComponent(notes);
-
-  const url = 'https://wa.me/963936090222?text=' + encodeURIComponent(message);
-
-  window.open(url, '_blank');
-});
-</script>
-
 
 <section class="contact" id="contact">
   <div class="container">
@@ -419,32 +448,162 @@ const period = document.getElementById('trainingPeriod').value;
         <h3>📍 موقع الأكاديمية</h3>
         <p>دمشق – طريق المطار – الجسر السابع – تل مسكن</p>
         <p>🚐 المواصلات مؤمّنة للدورات التدريبية.</p>
-        <a href="https://maps.app.goo.gl/T73JccJYQYM9QpMt5"
-           target="_blank" rel="noopener">
-          افتح الموقع على الخريطة ←
-        </a>
+        <a href="https://maps.app.goo.gl/T73JccJYQYM9QpMt5" target="_blank" rel="noopener">افتح الموقع على الخريطة ←</a>
       </article>
 
       <article class="card card-content">
         <h3>📸 إنستغرام الأكاديمية</h3>
         <p>@al_fakhama.academy</p>
-        <a href="https://www.instagram.com/al_fakhama.academy/"
-           target="_blank" rel="noopener">
-          تابع حسابنا ←
-        </a>
+        <a href="https://www.instagram.com/al_fakhama.academy/" target="_blank" rel="noopener">تابع حسابنا ←</a>
       </article>
     </div>
   </div>
 </section>
+
 </main>
-<footer>© <span id="year"></span> <strong>Luxury Academy</strong> — أكاديمية الفخامة للفروسية</footer>
+
+<footer>
+  © <span id="year"></span>
+  <strong>Luxury Academy</strong> — أكاديمية الفخامة للفروسية
+</footer>
 
 <script>
+const bookingForm = document.getElementById('bookingForm');
+const serviceSelect = document.getElementById('service');
+const timeSelect = document.getElementById('time');
+const trainingPeriodBox = document.getElementById('trainingPeriodBox');
+const trainingPeriod = document.getElementById('trainingPeriod');
+const formMessage = document.getElementById('formMessage');
+
+// تعبئة قائمة الأوقات حسب الخدمة المختارة
+function updateBookingOptions() {
+  const service = serviceSelect.value;
+
+  timeSelect.innerHTML = '<option value="">اختر الوقت</option>';
+
+  trainingPeriodBox.style.display =
+    service === 'دورة تدريبية' ? 'block' : 'none';
+
+  trainingPeriod.required = service === 'دورة تدريبية';
+
+  // إلغاء فترة التدريب القديمة عند تغيير الخدمة
+  trainingPeriod.value = '';
+
+  if (service === 'ركوب حر داخل الملعب') {
+    addHours([6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]);
+  } else if (service === 'مسارات خارجية') {
+    addHours([6,7,8,9,10,11,12,13,14,15,16,17]);
+  } else if (service === 'دورة تدريبية') {
+    timeSelect.innerHTML = '<option value="">اختر فترة التدريب أولاً</option>';
+  } else if (service === 'جلسة تصوير' || service === 'استفسار آخر') {
+    addOption('حسب الاتفاق', 'حسب الاتفاق');
+  }
+}
+
+// إضافة أوقات إلى القائمة
+function addHours(hours) {
+  hours.forEach(function(hour) {
+    const value = String(hour).padStart(2, '0') + ':00';
+    const displayHour = hour % 12 || 12;
+    const suffix = hour < 12 ? 'صباحًا' : 'مساءً';
+
+    addOption(value, displayHour + ':00 ' + suffix);
+  });
+}
+
+function addOption(value, text) {
+  const option = document.createElement('option');
+  option.value = value;
+  option.textContent = text;
+  timeSelect.appendChild(option);
+}
+
+// تحديث الوقت عند اختيار الخدمة
+serviceSelect.addEventListener('change', updateBookingOptions);
+
+// أوقات الدورات التدريبية حسب الفترة
+trainingPeriod.addEventListener('change', function() {
+  if (serviceSelect.value !== 'دورة تدريبية') return;
+
+  timeSelect.innerHTML = '<option value="">اختر الوقت</option>';
+
+  let hours = [];
+
+  if (trainingPeriod.value === 'صباحية') {
+    hours = [6,7,8,9,10,11];
+  } else if (trainingPeriod.value === 'مسائية') {
+    hours = [16,17,18,19,20,21];
+  } else if (trainingPeriod.value === 'برايفت (تدريب خاص)') {
+    hours = [6,7,8,9,10,11,16,17,18,19,20,21];
+  }
+
+  addHours(hours);
+});
+
+// منع اختيار تاريخ سابق
+const dateInput = document.getElementById('date');
+const today = new Date();
+const localToday = [
+  today.getFullYear(),
+  String(today.getMonth() + 1).padStart(2, '0'),
+  String(today.getDate()).padStart(2, '0')
+].join('-');
+
+dateInput.min = localToday;
+
+// إرسال الطلب عبر واتساب
+bookingForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = serviceSelect.value;
+  const date = dateInput.value;
+  const time = timeSelect.value;
+  const period = trainingPeriod.value;
+  const notes = document.getElementById('notes').value.trim();
+
+  // تحقق إضافي للتأكد من وجود الخدمة والوقت
+  if (!service) {
+    formMessage.textContent = 'الرجاء اختيار الخدمة أولاً.';
+    serviceSelect.focus();
+    return;
+  }
+
+  if (!time) {
+    formMessage.textContent = 'الرجاء اختيار الوقت المفضّل.';
+    timeSelect.focus();
+    return;
+  }
+
+  if (service === 'دورة تدريبية' && !period) {
+    formMessage.textContent = 'الرجاء اختيار فترة التدريب.';
+    trainingPeriod.focus();
+    return;
+  }
+
+  const message = [
+    'السلام عليكم، أريد تقديم طلب حجز في أكاديمية الفخامة 🏇',
+    'الاسم: ' + name,
+    'رقم الهاتف: ' + phone,
+    'الخدمة: ' + service,
+    'التاريخ المفضّل: ' + date,
+    'الوقت: ' + time,
+    'فترة التدريب: ' + (period || 'لا ينطبق'),
+    'ملاحظات: ' + (notes || 'لا توجد')
+  ].join('\n');
+
+  const whatsappNumber = '963936090222';
+  const url = 'https://wa.me/' + whatsappNumber +
+    '?text=' + encodeURIComponent(message);
+
+  window.open(url, '_blank');
+  formMessage.textContent = 'تم تجهيز الطلب. أكملي إرساله من واتساب.';
+});
+
 document.getElementById('year').textContent =
   new Date().getFullYear();
 </script>
-</body>
-</html>
 
 </body>
 </html>
