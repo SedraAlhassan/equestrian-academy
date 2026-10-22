@@ -227,6 +227,73 @@ footer strong{color:var(--gold)}
 </section>
 
 
+<section id="booking">
+  <div class="container">
+    <div class="heading">
+      <small>BOOK YOUR EXPERIENCE</small>
+      <h2>🏇 قدّم طلبك في أكاديمية الفخامة</h2>
+      <p>املأ البيانات التالية وسنستقبل طلبك عبر واتساب.</p>
+    </div>
+
+    <form id="bookingForm">
+      <label for="name">الاسم الكامل</label>
+      <input id="name" name="name" required
+             placeholder="اكتب اسمك الكامل">
+
+      <label for="phone">رقم الهاتف</label>
+      <input id="phone" name="phone" type="tel" required
+             placeholder="رقم التواصل">
+
+      <label for="service">نوع الطلب</label>
+      <select id="service" name="service" required>
+        <option value="">اختر الخدمة</option>
+        <option>ركوب حر داخل الملعب</option>
+        <option>دورة تدريبية</option>
+        <option>مسارات خارجية</option>
+        <option>جلسة تصوير</option>
+        <option>استفسار آخر</option>
+      </select>
+
+      <label for="date">التاريخ المفضّل</label>
+      <input id="date" name="date" type="date" required>
+
+      <label for="notes">ملاحظات إضافية</label>
+      <textarea id="notes" name="notes"
+                placeholder="عدد الأشخاص أو أي تفاصيل إضافية"></textarea>
+
+      <button class="btn" type="submit">
+        إرسال الطلب عبر واتساب
+      </button>
+
+      <p id="formMessage"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+  const date = document.getElementById('date').value;
+  const notes = document.getElementById('notes').value.trim();
+
+  const message =
+    'السلام عليكم، أريد تقديم طلب حجز في أكاديمية الفخامة 🏇%0A' +
+    'الاسم: ' + encodeURIComponent(name) + '%0A' +
+    'رقم الهاتف: ' + encodeURIComponent(phone) + '%0A' +
+    'الخدمة: ' + encodeURIComponent(service) + '%0A' +
+    'التاريخ المفضّل: ' + encodeURIComponent(date) + '%0A' +
+    'ملاحظات: ' + encodeURIComponent(notes);
+
+  const url = 'https://wa.me/963936090222?text=' + message;
+  window.open(url, '_blank');
+});
+</script>
+
+
 <section class="contact" id="contact">
   <div class="container">
     <div class="heading">
