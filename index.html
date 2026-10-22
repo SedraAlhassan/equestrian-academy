@@ -288,6 +288,78 @@ footer strong{color:var(--gold)}
 </section>
 
 <script>
+
+const serviceSelect = document.getElementById('service');
+const timeSelect = document.getElementById('time');
+const trainingPeriodBox = document.getElementById('trainingPeriodBox');
+const trainingPeriod = document.getElementById('trainingPeriod');
+
+function updateBookingOptions() {
+  const service = serviceSelect.value;
+  timeSelect.innerHTML = '<option value="">اختر الوقت</option>';
+
+  trainingPeriodBox.style.display =
+    service === 'دورة تدريبية' ? 'block' : 'none';
+  trainingPeriod.required = service === 'دورة تدريبية';
+
+  let start = 6;
+  let end = 17;
+
+  if (service === 'ركوب حر داخل الملعب') {
+    end = 23;
+  }
+
+  if (service === 'مسارات خارجية') {
+    end = 17;
+  }
+
+  if (
+    service === 'ركوب حر داخل الملعب' ||
+    service === 'مسارات خارجية'
+  ) {
+    for (let hour = start; hour <= end; hour++) {
+      const option = document.createElement('option');
+      const suffix = hour < 12 ? 'صباحًا' : 'مساءً';
+      const displayHour = hour % 12 || 12;
+
+      option.value = String(hour).padStart(2, '0') + ':00';
+      option.textContent = displayHour + ':00 ' + suffix;
+      timeSelect.appendChild(option);
+    }
+  } else if (service === 'دورة تدريبية') {
+    timeSelect.innerHTML =
+      '<option value="">اختر الفترة أولاً</option>';
+  }
+}
+
+serviceSelect.addEventListener('change', updateBookingOptions);
+
+trainingPeriod.addEventListener('change', function() {
+  if (serviceSelect.value !== 'دورة تدريبية') return;
+
+  timeSelect.innerHTML = '<option value="">اختر الوقت</option>';
+
+  let hours = [];
+
+  if (trainingPeriod.value === 'صباحية') {
+    hours = [6, 7, 8, 9, 10, 11];
+  } else if (trainingPeriod.value === 'مسائية') {
+    hours = [16, 17, 18, 19, 20, 21];
+  } else if (trainingPeriod.value === 'برايفت (تدريب خاص)') {
+    hours = [6, 7, 8, 9, 10, 11, 16, 17, 18, 19, 20, 21];
+  }
+
+  hours.forEach(hour => {
+    const option = document.createElement('option');
+    const suffix = hour < 12 ? 'صباحًا' : 'مساءً';
+    const displayHour = hour % 12 || 12;
+
+    option.value = String(hour).padStart(2, '0') + ':00';
+    option.textContent = displayHour + ':00 ' + suffix;
+    timeSelect.appendChild(option);
+  });
+});
+
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
